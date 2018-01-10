@@ -17,11 +17,14 @@ def getPrime(a, b):
         n+=1
     print(n)
     assert(n%2==1)
-    while not (mr.isPrime(n, 64)):
-        print("Failed!")
+    for i in range(1100):
+        if (mr.isPrime(n, 64)):
+            print("Success!")
+            print(n)
+            return n
+        #print("Failed!")
         n+=2
-    print("Success!")
-    print(n)
+    print("Failed after 1100 tries.") # TODO: False negatives?
     return n
 
 # Totient Getter
