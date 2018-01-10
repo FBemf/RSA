@@ -58,20 +58,17 @@ def isPrime(n, i):
     rand=random.SystemRandom()
     a=rand.randint(1, n-i)
     for k in range(i):
-        if (pow(a+k*2, s, n) == 1):
-        #if (sm.squareAndMultiply(a+k, s, n) == 1):
+        p=pow(a+k*2, s, n)
+        if (p==1):
             continue
-
-        b=0
-        for j in range(r):
-            if (pow(a+k, pow(2, j) * s, n) == n-1):
-            #if (sm.squareAndMultiply(a+k, s, n) == n - 1):
-                b=1
-                break
-        if b==1:
-            continue
-
-        return False
+        else:
+            t=1
+            while (p!=n-1):
+                p=pow(p, 2, n) #TODO: make this work
+                t+=1
+                if (t==r):
+                    return False
+        continue
 
     return True
 
