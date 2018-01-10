@@ -62,13 +62,13 @@ def isPrime(n, i):
         if (p==1):
             continue
         else:
-            t=1
+            t=0
             while (p!=n-1):
-                p=pow(p, 2, n) #TODO: make this work
+                p=pow(p, 2, n)
                 t+=1
                 if (t==r):
                     return False
-        continue
+            continue
 
     return True
 
