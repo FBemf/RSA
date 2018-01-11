@@ -16,8 +16,6 @@ def isPrime(n, i):
     # n must be odd and greater than i; i is recommended
     # to be at least 64, for cryptographic safety.
 
-
-
     primes = \
     [ 2,      3,      5,      7,     11,     13,     17,     19,     23,     29,
      31,     37,     41,     43,     47,     53,     59,     61,     67,     71,
@@ -47,11 +45,11 @@ def isPrime(n, i):
         return False
 
     #find values s & r such that n=2^r*s+1, s is odd
-    r=1
+    r=0
     s=n-1
     while (s%2 == 0):
-        s=int(s/2)
-        r=r*+1
+        s=int(s//2)
+        r+=1
 
     #test i consecutive values 1<=a<n
     #for a^s=1 (mod n) or a^[(2^j)s]=-1 (mod n) for all 0<=j<r
