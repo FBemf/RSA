@@ -1,5 +1,4 @@
 # Miller Rabin Test
-# RSA encryption
 
 import sm
 import math
