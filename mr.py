@@ -1,6 +1,5 @@
 # Miller Rabin Test
 
-import sm
 import math
 import random
 
