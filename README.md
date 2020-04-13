@@ -1,2 +1,2 @@
 # RSA
-A simple and usable implementation of RSA encryption
+A simple RSA implementation in python.
